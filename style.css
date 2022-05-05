@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 100px;
+}
+
+.niasbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.niasbox a {
+    text-decoration: none;
+}
+
+.parentnias {
+    width: 100%;
+}
+
+.svgbox svg {
+    width: 100%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.svgbox {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.082);
+    border-radius: 20px;
+    transition: 0.5s;
+    margin: 5px;
+    padding: 5px;
+    width: 23%;
+}
+
+
+/* From uiverse.io by @adamgiebl */
+
+.cssbuttons-io-button {
+    background: #026efa;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    width: 100%;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    right: 0.3em;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.349);
+}
+
+.svgbox:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #026efa;
+}
+
+.svgbox:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.svgbox:active .icon {
+    transform: scale(0.95);
+}
+
+.svgbox:hover {
+    z-index: 999;
+    transform: scale(1.2);
+    transition: 0.5s;
+    box-shadow: 0 0 30px rgba(0, 140, 255, 0.295);
+}
+
+.svgbox:hover .cssbuttons-io-button {
+    box-shadow: inset 0 0 20px 20px #2ecc71;
+}
+
+@media only screen and (max-width: 700px) {
+    .svgbox svg {
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .svgbox {
+        width: 45%
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .svgbox button {
+        font-size: 15px;
+    }
+}
+
+.niasbox:before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #0250ff80;
+    transform: rotate(60deg);
+    right: -250px;
+    border-radius: 80px;
+    z-index: -99;
+    animation: topdown 3s linear infinite;
+}
+
+@keyframes topdown {
+    0% {
+        top: 60px;
+    }
+    50% {
+        top: 80px;
+    }
+    100% {
+        top: 60px;
+    }
+}
+
+.niasbox:after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #0250ff80;
+    transform: rotate(60deg);
+    left: -250px;
+    border-radius: 80px;
+    z-index: -99;
+    animation: topdown 2s linear infinite;
+}
